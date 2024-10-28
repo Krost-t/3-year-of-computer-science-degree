@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-16">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{url_for('create_user')}}" method="POST">
+        <div>
+            <label for="nom">Nom : </label>
+            <input type="text" name="nom" id="nom" id="input" required>
+        </div>
+        <div>
+            <label for="prenom">Prénom : </label>
+            <input type="text" name="prenom" id="prenom" id="input" required>
+        </div>
+        <div>
+            <label for="Email">Email : </label>
+            <input type="text" name="email" id="email" id="input" required>
+        </div>
+        <div>
+            <label for="age">Age : </label>
+            <input type="text" name="age" id="age" id="input" required>
+        </div>
+        <div>
+            <label for="adresse">Adresse : </label>
+            <input type="text" name="adresse" id="adresse" id="input" required>
+        </div>
+        <div>
+            <label for="adresse">documents </label>
+            <input type="file" name="files" id="files" multiple>
+        </div>
+
+        <input type="submit" value="Envoyer" id="boutton" >
+    </form>
+
+    <form action="{{url_for('create_user_sante')}}" method="POST">
+        <div>
+            <label for="nom">Taille : </label>
+            <input type="text" name="taille"  id="input" required>
+        </div>
+        <div>
+            <label for="prenom">Groupe Sanguin : </label>
+            <input type="text" name="GPsanguin"  id="input" required>
+        </div>
+        <div>
+            <label for="Email">Médecin traitant : </label>
+            <input type="text" name="traitant" id="input" required>
+        </div>
+        <div>
+        <input type="submit" value="Envoyer" id="boutton" >
+    </form>
+        <a href="{{url_for('see_users')}}"><input type="button" value="voir BDD"></a>
+        <a href="{{url_for('see_users_sante')}}"><input type="button" value="voir BDD sante"></a>
+</body>
+<script src="{{ url_for('static/js', filename='script.js')}}"></script>
+</html>

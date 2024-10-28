@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_home.css')}}">
+    <title>mon appli</title>
+</head>
+<body>
+    <div class="container">
+       <div class="card">
+
+        <h3>SuperCard</h3>
+        <h5>conexion</h5>
+
+        <div class="inputBox">
+            <input type="text" required>
+            <span>Ussername</span>
+        </div>
+
+        <div class="inputBox">
+            <input type="password" required>
+            <span>password</span>
+        </div>
+
+        <div>
+            <a href="{{ url_for('info_user') }}"><input type="button" value="Login" id="boutton"></a>&ensp;
+            <a href="{{ url_for('forum') }}"><input type="button" value="sign in" id="boutton"></a>
+        </div>
+       
+       </div>
+    </div>
+</body>
+<script src="{{url_for('static',filename='js/script.js')}}"></script>
+</html>

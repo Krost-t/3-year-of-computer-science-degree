@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/form.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="singin-content">
+            <div class="form-content">
+                <h2>Connexion</h2>
+                <form action="" method="post">
+                    <input type="email" name="mail" id="mail" pattern="[A-z0-9][.@]{4,}" autocomplete="off" placeholder="E-mail"/>
+                    <input type="password" name="pwd" id="pwd" pattern="[A-z0-9][.-_][?!&]{8,12}" autocomplete="new-password" placeholder="Mot de passe"/>
+                    <p><a href="">Mot de passe oublié ?</a> <a href="">Mail?</a></p>
+                    <input type="submit" value="envoyer">
+                </form>
+            </div>
+        </div>
+
+        <div class="login-content">
+            <div>
+                <h2>s'inscricre</h2>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <input type="text" name="name" id="name" pattern="[A-z]{4,}" placeholder="Nom" autocomplete="off"/>
+                    <input type="text" name="prenom" id="prenom" pattern="[A-z]{4,}" placeholder="Prénom" autocomplete="off"/>
+                       <select name="" id="">
+                        <option value="1">Genre</option>
+                        <option value="2">M.</option>
+                        <option value="3">Mdme.</option>
+                        <option value="4">Mlle.</option>
+                    </select>
+                    <input type="email" name="mail" id="mail" pattern="[A-z0-9][.@]{4,}" placeholder="E-mail" autocomplete="off"/>
+                    <div class="block">
+                        <input type="password" name="pwd" id="pwd" pattern="[A-z0-9][.-_][?!&]{8,12}" autocomplete="new-password" placeholder="Mot de passe" />
+                        <input type="password" name="pwd2" id="pwd2" pattern="[A-z0-9][.-_][?!&]{8,12}" autocomplete="new-password" placeholder="Confirmation" />
+                    </div>
+                    <div class="block2">
+                        <input type="text" name="" id=""  value="Date de niassance :" disabled>
+                        <input type="date" name="date-naissance" id="dn"  autocomplete="off">
+                    </div>
+                    <div class="block3">
+                        <input type="text" name="" id=""  value="Photo :" disabled>
+                        <input type="file" name="carte-identity" id="carteID" capture="user" accept=".png, .jpg, .jpeg, .pdf" placeholder="E-mail" autocomplete="off">
+                    </div>
+                    
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
+
+        <div id="switch-content">
+            <div class="contain">
+                <h2>lorem ipsum</h2>
+                <h4>lorem ipsum</h4>
+                <a href="{{url_for('home')}}"><i class="bi bi-house"></i></a>
+                <input type="button" value="S'inscricre" id="button">
+            </div>
+        </div>
+    
+    </div>
+
+        
+</body>
+<script src="{{ url_for('static', filename='js/script.js')}}"></script>
+</html>
